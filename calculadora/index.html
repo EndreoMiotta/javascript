@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #080807;
+
+        }
+
+        #calculator {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-gap: 8px;
+            max-width: 300px;
+            background-color: #f9eb4f;
+            /* Amarelo */
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        button {
+            padding: 15px;
+            font-size: 18px;
+            border: 1px solid #fff;
+            /* Branco */
+            border-radius: 5px;
+            background-color: #fff;
+            /* Branco */
+            color: #000;
+            /* Preto */
+            cursor: pointer;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        button:hover {
+            background-color: #333;
+            /* Cinza escuro */
+            color: #fff;
+            /* Branco */
+        }
+
+        #result {
+            grid-column: span 4;
+            height: 30px;
+            padding: 15px;
+            text-align: right;
+            border: 1px solid #fff;
+            /* Branco */
+            border-radius: 5px;
+            background-color: #fff;
+            /* Branco */
+            color: #000;
+            /* Preto */
+            font-size: 24px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="calculator">
+        <div id="result"></div>
+        <button id="clear" onclick="limpar()">C</button>
+        <button id="divide" onclick="inserir('/')">/</button>
+        <button id="multiply" onclick="inserir('*')">*</button>
+        <button id="add" onclick="inserir('+')">+</button>
+        <button id="9" onclick="inserir('9')">9</button>
+        <button id="8" onclick="inserir('8')">8</button>
+        <button id="7" onclick="inserir('7')">7</button>
+        <button id="subtract" onclick="inserir('-')">-</button>
+        <button id="6" onclick="inserir('6')">6</button>
+        <button id="5" onclick="inserir('5')">5</button>
+        <button id="4" onclick="inserir('4')">4</button>
+        <button id="equals" onclick="confirmar()">=</button>
+        <button id="3" onclick="inserir('3')">3</button>
+        <button id="2" onclick="inserir('2')">2</button>
+        <button id="1" onclick="inserir('1')">1</button>
+        <button id="decimal" onclick="inserir('.')">.</button>
+        <button id="0" onclick="inserir('0')">0</button>
+    </div>
+    <script src="main.js">
+    </script>
+
+</body>
+
+</html>
